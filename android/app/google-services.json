@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "830978941104",
+    "project_id": "hazriverpod",
+    "storage_bucket": "hazriverpod.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830978941104:android:766828f7e66ad5a07c5b75",
+        "android_client_info": {
+          "package_name": "com.example.river_pod_practise"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtL_WUsIXE1sE4ZNhgfwEw2xfBNd0tsBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
