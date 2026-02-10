@@ -6,6 +6,7 @@ import 'package:river_pod_practise/features/auth/presentation/riverpod/auth_stat
 // import 'package:river_pod_practise/features/auth/presentation/riverpod/auth_provider.dart';
 import 'package:river_pod_practise/features/home_page/presentation/riverpod/riverpod.dart';
 import 'package:river_pod_practise/features/home_page/presentation/widgets/floating_action_button.dart';
+import 'package:river_pod_practise/features/post/presentation/pages/post_list_page.dart';
 import 'package:river_pod_practise/features/task/presentation/pages/task_list_screen.dart';
 
 class MyHomePage extends ConsumerStatefulWidget {
@@ -62,7 +63,15 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
                     ),
                     SizedBox(width: 20),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PostListPage(),
+                          ),
+                        );
+                        ;
+                      },
                       child: Text("Phase 3 - Forms & Validation"),
                     ),
                     SizedBox(width: 20),
@@ -107,6 +116,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       FloatingActionButtonCustom(
+                        heroTag: "button01",
                         widget: Text("add"),
                         function: () {
                           ref.read(initialNumber.notifier).state++;
@@ -116,6 +126,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
                       ),
                       SizedBox(width: 30),
                       FloatingActionButtonCustom(
+                        heroTag: "button02",
                         widget: Text("minus"),
                         function: () {
                           ref.read(initialNumber.notifier).state--;
@@ -140,6 +151,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       FloatingActionButtonCustom(
+                        heroTag: "button03",
                         widget: Text("add"),
                         function: () {
                           ref.read(riverpodHard).addCounter();
@@ -149,6 +161,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
                       ),
                       SizedBox(width: 30),
                       FloatingActionButtonCustom(
+                        heroTag: "button04",
                         widget: Text("minus"),
                         function: () {
                           ref.read(riverpodHard).removeCounter();

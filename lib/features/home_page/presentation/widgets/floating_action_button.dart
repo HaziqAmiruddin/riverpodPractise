@@ -5,6 +5,7 @@ class FloatingActionButtonCustom extends StatelessWidget {
   final VoidCallback function;
   final String tooltip;
   final Icon icon;
+  final Object heroTag;
 
   const FloatingActionButtonCustom({
     super.key,
@@ -12,11 +13,13 @@ class FloatingActionButtonCustom extends StatelessWidget {
     required this.function,
     required this.tooltip,
     required this.icon,
+    required this.heroTag,
   });
 
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton.extended(
+      heroTag: heroTag,
       label: widget,
       onPressed: function,
       tooltip: tooltip,
